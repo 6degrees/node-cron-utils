@@ -7,7 +7,7 @@ it takes a cron expression and tries to double it, if the cron should run every 
 
 To get started with the SwarmApp API, follow these steps:
 
-1. `$ npm i node-cron-utils`
+1. `$ npm i node-cron-utils` 
 
 ## Example Usage
 
