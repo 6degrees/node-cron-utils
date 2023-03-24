@@ -14,7 +14,7 @@ test('testing */10 * * * * *', ()=>{
 })
 
 test('testing * */1 * * * *', ()=>{
-    expect(hi.double("* */1 * * * *")).toBe("*/2 */2 * * * *") // not sure if it is correct
+    expect(hi.double("* */1 * * * *")).toBe("* */2 * * * *") // not sure if it is correct
 })
 
 test('testing */20 * * * * *', ()=>{
@@ -38,5 +38,5 @@ test('testing 40 */40 * * * *', ()=>{
 })
 
 test('testing */5 * * * *', ()=>{
-    expect(hi.double("*/5 * * * *")).toBe("*/2 */10 * * * *") // Not sure if this is correct
+    expect(hi.double("*/5 * * * *")).toBe("* */10 * * * *") // Not sure if this is correct
 })

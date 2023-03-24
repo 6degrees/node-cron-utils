@@ -57,7 +57,9 @@ class utils {
 		}
 		else if(expression["seconds"] == "*"){   // *
 			// do nothing
-			new_expression["seconds"] = `*/2`;
+			if(expression["minutes"] == "*"){
+				new_expression["seconds"] = `*/2`;
+			}
 		}
 		else{ // 5
 			let range = expression["seconds"];
