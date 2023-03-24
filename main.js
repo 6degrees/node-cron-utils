@@ -1,22 +1,40 @@
 class utils {
 	double(cronExpression) {
 		const interval = cronExpression.split(' ');
-	  
+
 		const expression = []
-		expression["seconds"] = interval[0];
-		expression["minutes"] = interval[1];
-		expression["hours"] = interval[2];
-		expression["daysOfMonth"] = interval[3];
-		expression["months"] = interval[4];
-		expression["daysOfWeek"] = interval[5];
-		
 		let new_expression = []
-		new_expression["seconds"] = interval[0];
-		new_expression["minutes"] = interval[1];
-		new_expression["hours"] = interval[2];
-		new_expression["daysOfMonth"] = interval[3];
-		new_expression["months"] = interval[4];
-		new_expression["daysOfWeek"] = interval[5];
+		if(interval.length < 6){
+			expression["seconds"] = "*";
+			expression["minutes"] = interval[0];
+			expression["hours"] = interval[1];
+			expression["daysOfMonth"] = interval[2];
+			expression["months"] = interval[3];
+			expression["daysOfWeek"] = interval[4];
+
+			new_expression["seconds"] = expression["seconds"]
+			new_expression["minutes"] = expression["minutes"]
+			new_expression["hours"] = expression["hours"]
+			new_expression["daysOfMonth"] = expression["daysOfMonth"]
+			new_expression["months"] = expression["months"]
+			new_expression["daysOfWeek"] = expression["daysOfWeek"]
+		}
+		else{
+			expression["seconds"] = interval[0];
+			expression["minutes"] = interval[1];
+			expression["hours"] = interval[2];
+			expression["daysOfMonth"] = interval[3];
+			expression["months"] = interval[4];
+			expression["daysOfWeek"] = interval[5];
+
+			new_expression["seconds"] = expression["seconds"];
+			new_expression["minutes"] = expression["minutes"];
+			new_expression["hours"] = expression["hours"];
+			new_expression["daysOfMonth"] = expression["daysOfMonth"];
+			new_expression["months"] = expression["months"];
+			new_expression["daysOfWeek"] = expression["daysOfWeek"];
+		}
+		
 	
 		
 		let add_to_minutes = false;
@@ -69,9 +87,12 @@ class utils {
 			if(add_to_minutes != false){
 				new_expression["minutes"] = `*/${add_to_minutes}`;
 			}
+			else{
+				new_expression["minutes"] = new_expression["minutes"]
+			}
 		}
 		else{ // 5
-			
+			new_expression["minutes"] = new_expression["minutes"]
 		}
 		
 		return `${new_expression["seconds"]} ${new_expression["minutes"]} ${new_expression["hours"]} ${new_expression["daysOfMonth"]} ${new_expression["months"]} ${new_expression["daysOfWeek"]}`;

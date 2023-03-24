@@ -37,3 +37,6 @@ test('testing 40 */40 * * * *', ()=>{
     expect(hi.double("40 */40 * * * *")).toBe("20 */21 * * * *") // Not sure if this is correct
 })
 
+test('testing */5 * * * *', ()=>{
+    expect(hi.double("*/5 * * * *")).toBe("*/2 */10 * * * *") // Not sure if this is correct
+})
