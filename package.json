@@ -16,6 +16,10 @@
     "node-cron",
     "utilities"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
   "author": "Mohannad F. Otaibi",
   "license": "ISC",
   "bugs": {
