@@ -1,0 +1,28 @@
+{
+  "name": "@6degrees/node-cron-utils",
+  "version": "0.0.1",
+  "description": "Utilities functions to manipulate node-cron expressions",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6degrees/node-cron-utils.git"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "node-cron",
+    "utilities"
+  ],
+  "author": "Mohannad F. Otaibi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/6degrees/node-cron-utils/issues"
+  },
+  "homepage": "https://github.com/6degrees/node-cron-utils#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
