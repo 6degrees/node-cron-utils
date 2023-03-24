@@ -22,18 +22,18 @@ test('testing */20 * * * * *', ()=>{
 })
 
 test('testing */40 * * * * *', ()=>{
-    expect(hi.double("*/40 * * * * *")).toBe("*/20 */1 * * * *")
+    expect(hi.double("*/40 * * * * *")).toBe("20 */1 * * * *")
 })
 
-test('testing */20 */1 * * * *', ()=>{
-    expect(hi.double("*/20 */1 * * * *")).toBe("*/40 */2 * * * *")
+test('testing 20 */1 * * * *', ()=>{
+    expect(hi.double("20 */1 * * * *")).toBe("40 */2 * * * *")
 })
 
-test('testing */40 */1 * * * *', ()=>{
-    expect(hi.double("*/40 */1 * * * *")).toBe("*/20 */3 * * * *")
+test('testing 40 */1 * * * *', ()=>{
+    expect(hi.double("40 */1 * * * *")).toBe("20 */3 * * * *")
 })
 
-test('testing */40 */40 * * * *', ()=>{
-    expect(hi.double("*/40 */40 * * * *")).toBe("*/20 */21 * * * *") // Not sure if this is correct
+test('testing 40 */40 * * * *', ()=>{
+    expect(hi.double("40 */40 * * * *")).toBe("20 */21 * * * *") // Not sure if this is correct
 })
 

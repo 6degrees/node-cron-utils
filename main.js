@@ -29,14 +29,26 @@ class utils {
 				add_to_minutes = Math.floor(doubledRange / 60);
 				doubledRange = doubledRange % 60;
 			}
-			new_expression["seconds"] = `${step}/${doubledRange}`;
+			if(add_to_minutes){
+				new_expression["seconds"] = `${doubledRange}`;
+			}
+			else{
+				new_expression["seconds"] = `${step}/${doubledRange}`;
+			}
+			
 		}
 		else if(expression["seconds"] == "*"){   // *
 			// do nothing
 			new_expression["seconds"] = `*/2`;
 		}
 		else{ // 5
-			
+			let range = expression["seconds"];
+			let doubledRange = parseInt(range) * 2;
+			if(doubledRange >= 60){
+				add_to_minutes = Math.floor(doubledRange / 60);
+				doubledRange = doubledRange % 60;
+			}
+			new_expression["seconds"] = `${doubledRange}`;
 		}
 	
 
