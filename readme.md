@@ -1,4 +1,4 @@
-# node-cron Utilities
+# Node Cron Utilities
 
 Private utilities for now, not ready for public use
 it takes a cron expression and tries to double it, if the cron should run every 10 seconds, makes it every 20 seconds
@@ -7,7 +7,7 @@ it takes a cron expression and tries to double it, if the cron should run every 
 
 To get started with the SwarmApp API, follow these steps:
 
-1. `$ npm i node-cron-utils` 
+1. `$ npm i @6degrees/node-cron-utils`
 
 ## Example Usage
 
@@ -33,4 +33,4 @@ We welcome contributions from the community! To contribute to the this repo, fol
 
 ## License
 
-The SwarmApp API is licensed under the MIT License. See the LICENSE file for details.
+The Node Cron Utilities package is licensed under the MIT License. See the LICENSE file for details.
