@@ -1,6 +1,6 @@
 {
   "name": "@6degrees/node-cron-utils",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Utilities functions to manipulate node-cron expressions",
   "main": "main.js",
   "scripts": {
